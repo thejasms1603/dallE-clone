@@ -12,7 +12,9 @@ const openai = new OpenAI({
 
 
 router.route('/').get((req,res)=>{
-    res.send("hello from DALL-E")
+    res.status(200).json({
+      message: "hello from DALL-E"
+    })
 })
 
 
@@ -38,3 +40,4 @@ router.route("/").post(async (req, res) => {
 });
 
 export default router;
+
